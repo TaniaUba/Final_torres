@@ -1,0 +1,96 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+	 <style>
+      html, body {
+        height: 500px;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        background-image: url(img/mapa.jpg);
+      }
+      #map {
+        width: 500px;
+        height: 500px;
+      -webkit-filter: sepia(70%);
+       filter: sepia(70%);
+      }
+      .w3-container {
+    position: absolute;
+    padding-top: 50px;
+  }
+  nav {
+        margin-top: 10px;
+        padding: 24px;
+        text-align: center;
+        font-family: helvetica;
+        display: inline-block;
+    }
+    .link-3 {
+       transition: 0.4s;
+       color: #ffffff;
+       font-size: 20px;
+       text-decoration: none;
+       padding: 0 10px;
+       margin: 0 10px;
+    }
+    .link-3:hover {
+       background-color: #363636;
+       color: #fff;
+       padding: 24px 10px;
+    }
+    .vinedos{
+      color:#fff;
+      font-family: helvetica;
+      background-color:#501705; 
+      width: 600px;
+      height: auto;
+    }
+    </style>
+</head>
+<body>
+    <CENTER>
+  <nav id="nav-3">
+  <a class="link-3" href="inicio.php">Home</a>
+  <a class="link-3" href="historia.html">Historia</a>
+  <img src="img/logoBlanco.png" style="width:130px;">
+  <a class="link-3" href="table.php">Vinos</a>
+  <a class="link-3" href="mapa.html">Viñedos</a>
+</nav>
+    <div class="vinedos">
+      <h1 style="padding-top:10px;">Nuestros Viñedos</h1>
+    
+    <div id="map"></div>
+    <script>
+		
+		function initMap() {
+		  var map = new google.maps.Map(document.getElementById('map'), {
+		    zoom: 6,
+		    center: {lat: 41.375853, lng: 1.629585}
+		  });
+
+		  //var image = 'images/beachflag.png';
+		  var marker = new google.maps.Marker({
+		    position: {lat: 41.705545, lng: 1.218108},
+		    map: map
+		    //icon: image
+		  });
+
+		  var marker = new google.maps.Marker({
+          position: {lat:41.186205, lng: 0.748473 },
+           map: map
+          });
+
+          var marker = new google.maps.Marker({
+          position: {lat:42.137546, lng:  -8.030103 },
+           map: map
+          });
+		}
+
+	</script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMDOmLx_t6zydZ6ojXJ8ZkbI-aBbCkDno&callback=initMap"
+        async defer></script>
+        </div>
+     </CENTER>
+</body>
+</html>
